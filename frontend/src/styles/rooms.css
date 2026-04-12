@@ -1,0 +1,136 @@
+/* ═══════════════════════════════════════════
+   ROOMS PAGE
+   ═══════════════════════════════════════════ */
+
+.rooms-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.rooms-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.room-card {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.room-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.room-number {
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.room-number-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.room-edit-btn {
+  background: var(--bg-glass);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all var(--transition-fast);
+}
+
+.room-edit-btn:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-glow);
+  color: var(--accent-purple);
+}
+
+.room-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.room-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.room-detail-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.room-detail-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.room-occupancy {
+  margin-top: var(--space-sm);
+}
+
+.occupancy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.occupancy-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.occupancy-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.room-status-full {
+  color: #f87171 !important;
+}
+
+.room-status-available {
+  color: #34d399 !important;
+}
+
+@media (max-width: 640px) {
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rooms-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+}
